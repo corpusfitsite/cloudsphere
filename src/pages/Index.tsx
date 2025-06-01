@@ -140,7 +140,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
             Criação de Sites
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-              Thundertale
+              CloudSphere
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
