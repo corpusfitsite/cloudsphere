@@ -3,18 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, X, Globe, Zap, Settings, MessageCircle, ShoppingCart, CreditCard, BarChart3 } from "lucide-react";
-import { useEffect, useState } from "react";
-
-const Index = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 3000); // Simula tempo de carregamento inicial
-
-    return () => clearTimeout(timer);
-  }, []);
 
 const Index = () => {
   const plans = [
@@ -364,18 +352,4 @@ const Index = () => {
     </div>
   );
 };
- if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 text-white text-center p-8">
-        <div>
-          <h2 className="text-2xl font-bold mb-4">⏳ O site está iniciando...</h2>
-          <p className="text-md">Pode levar até 40 segundos devido à alta demanda nos nossos servidores gratuitos.</p>
-          <p className="mt-4 text-sm text-blue-200">Obrigado pela paciência! 🌐</p>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
 export default Index;
