@@ -6,100 +6,110 @@ import { Check, X, Globe, Zap, Settings, MessageCircle, ShoppingCart, CreditCard
 
 const Index = () => {
   const plans = [
-    {
-      name: "Site Express",
-      emoji: "",
-      description: "Básico (3 pág.)",
-      price: "R$397",
-      monthly: "Grátis",
-      features: [
-        { name: "Tipo de site", value: "Básico (3 pág.)", included: true },
-        { name: "Velocidade de carregamento", value: "Lenta (free)", included: false },
-        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
-        { name: "Manutenção Mensal", value: "Não inclusa", included: false },
-        { name: "Futuras alterações", value: "Valor padrão", included: false },
-        { name: "Chatbot AI Integrado", value: "Não", included: false },
-        { name: "Carrinho de compras", value: "Não", included: false },
-        { name: "Pagamentos e frete", value: "Não", included: false },
-        { name: "Painel de pedidos e estoque", value: "Não", included: false },
-      ]
-    },
-    {
-      name: "Combo Essencial",
-      emoji: "",
-      badge: "🔥",
-      description: "Até 6 pág.",
-      price: "R$649",
-      monthly: "R$149/mês",
-      features: [
-        { name: "Tipo de site", value: "Até 6 pág.", included: true },
-        { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
-        { name: "Manutenção Mensal", value: "Inclusa", included: true },
-        { name: "Futuras alterações", value: "Valor padrão", included: false },
-        { name: "Chatbot AI Integrado", value: "Não", included: false },
-        { name: "Carrinho de compras", value: "Não", included: false },
-        { name: "Pagamentos e frete", value: "Não", included: false },
-        { name: "Painel de pedidos e estoque", value: "Não", included: false },
-      ]
-    },
-    {
-      name: "Combo Premium",
-      emoji: "👑",
-      badge: "⭐",
-      description: "Até 10 pág.",
-      price: "R$797",
-      monthly: "R$189/mês",
-      features: [
-        { name: "Tipo de site", value: "Até 10 pág.", included: true },
-        { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
-        { name: "Manutenção Mensal", value: "Inclusa", included: true },
-        { name: "Futuras alterações", value: "Camarada", included: true },
-        { name: "Chatbot AI Integrado", value: "Não", included: false },
-        { name: "Carrinho de compras", value: "Não", included: false },
-        { name: "Pagamentos e frete", value: "Não", included: false },
-        { name: "Painel de pedidos e estoque", value: "Não", included: false },
-      ]
-    },
-    {
-      name: "Max AI",
-      emoji: "",
-      badge: "🤖",
-      description: "Ilimitado",
-      price: "R$1.200",
-      monthly: "R$229/mês",
-      features: [
-        { name: "Tipo de site", value: "Ilimitado", included: true },
-        { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: "Incluso", included: true },
-        { name: "Manutenção Mensal", value: "Inclusa", included: true },
-        { name: "Futuras alterações", value: "Camarada", included: true },
-        { name: "Chatbot AI Integrado", value: "Incluso", included: true },
-        { name: "Carrinho de compras", value: "Não", included: false },
-        { name: "Pagamentos e frete", value: "Não", included: false },
-        { name: "Painel de pedidos e estoque", value: "Não", included: false },
-      ]
-    },
-    {
-      name: "Loja Virtual PRO",
-      emoji: "🛍️",
-      description: "Loja virtual completa",
-      price: "R$1497",
-      monthly: "R$229/mês",
-      features: [
-        { name: "Tipo de site", value: "Loja virtual completa", included: true },
-        { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
-        { name: "Manutenção Mensal", value: "Inclusa", included: true },
-        { name: "Futuras alterações", value: "Camarada", included: true },
-        { name: "Chatbot AI Integrado", value: "Opcional ($)", included: true },
-        { name: "Carrinho de compras", value: "Incluso", included: true },
-        { name: "Pagamentos e frete", value: "Integrado", included: true },
-        { name: "Painel de pedidos e estoque", value: "Incluso", included: true },
-      ]
-    }
-  ];
+  {
+    name: "Site Express",
+    description: "Básico (3 pág.)",
+    price: "R$600",
+    monthly: "Grátis",
+    features: [
+      { name: "Tipo de site", value: "Básico (3 pág.)", included: true },
+      { name: "Velocidade de carregamento", value: "Lenta (free)", included: false },
+      { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
+      { name: "Manutenção Mensal", value: "Não inclusa", included: false },
+      { name: "Futuras alterações", value: "Valor padrão", included: false },
+      { name: "Chatbot AI Integrado", value: "Não", included: false },
+      { name: "Carrinho de compras", value: "Não", included: false },
+      { name: "Pagamentos e frete", value: "Não", included: false },
+      { name: "Painel de pedidos e estoque", value: "Não", included: false }
+    ]
+  },
+  {
+    name: "Combo Essencial",
+    badge: "🔥",
+    description: "Até 6 pág.",
+    originalPrice: "R$800",
+    price: "R$649",
+    discountPercent: "-18,9%",
+    monthly: "R$149/mês",
+    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    features: [
+      { name: "Tipo de site", value: "Até 6 pág.", included: true },
+      { name: "Velocidade de carregamento", value: "Rápida", included: true },
+      { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
+      { name: "Manutenção Mensal", value: "Inclusa", included: true },
+      { name: "Futuras alterações", value: "Valor padrão", included: false },
+      { name: "Chatbot AI Integrado", value: "Não", included: false },
+      { name: "Carrinho de compras", value: "Não", included: false },
+      { name: "Pagamentos e frete", value: "Não", included: false },
+      { name: "Painel de pedidos e estoque", value: "Não", included: false }
+    ]
+  },
+  {
+    name: "Combo Premium",
+    badge: "⭐",
+    description: "Até 10 pág.",
+    originalPrice: "R$950",
+    price: "R$797",
+    discountPercent: "-16,1%",
+    monthly: "R$189/mês",
+    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    features: [
+      { name: "Tipo de site", value: "Até 10 pág.", included: true },
+      { name: "Velocidade de carregamento", value: "Rápida", included: true },
+      { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
+      { name: "Manutenção Mensal", value: "Inclusa", included: true },
+      { name: "Futuras alterações", value: "Camarada", included: true },
+      { name: "Chatbot AI Integrado", value: "Não", included: false },
+      { name: "Carrinho de compras", value: "Não", included: false },
+      { name: "Pagamentos e frete", value: "Não", included: false },
+      { name: "Painel de pedidos e estoque", value: "Não", included: false }
+    ]
+  },
+  {
+    name: "Max AI",
+    emoji: "🤖",
+    badge: "💡",
+    description: "Ilimitado",
+    originalPrice: "R$1.200",
+    price: "R$997",
+    discountPercent: "-16,9%",
+    monthly: "R$229/mês",
+    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    features: [
+      { name: "Tipo de site", value: "Ilimitado", included: true },
+      { name: "Velocidade de carregamento", value: "Rápida", included: true },
+      { name: "Domínio Personalizado", value: "Incluso", included: true },
+      { name: "Manutenção Mensal", value: "Inclusa", included: true },
+      { name: "Futuras alterações", value: "Camarada", included: true },
+      { name: "Chatbot AI Integrado", value: "Incluso", included: true },
+      { name: "Carrinho de compras", value: "Não", included: false },
+      { name: "Pagamentos e frete", value: "Não", included: false },
+      { name: "Painel de pedidos e estoque", value: "Não", included: false }
+    ]
+  },
+  {
+    name: "Loja Virtual PRO",
+    emoji: "🛍️",
+    description: "Loja virtual completa",
+    originalPrice: "R$1.800",
+    price: "R$1497",
+    discountPercent: "-16,8%",
+    monthly: "R$229/mês",
+    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    features: [
+      { name: "Tipo de site", value: "Loja virtual completa", included: true },
+      { name: "Velocidade de carregamento", value: "Rápida", included: true },
+      { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
+      { name: "Manutenção Mensal", value: "Inclusa", included: true },
+      { name: "Futuras alterações", value: "Camarada", included: true },
+      { name: "Chatbot AI Integrado", value: "Opcional ($)", included: true },
+      { name: "Carrinho de compras", value: "Incluso", included: true },
+      { name: "Pagamentos e frete", value: "Integrado", included: true },
+      { name: "Painel de pedidos e estoque", value: "Incluso", included: true }
+    ]
+  }
+];
+
 
 const projetos = [
   {
@@ -208,11 +218,29 @@ const projetos = [
                   <CardDescription className="text-sm">{plan.description}</CardDescription>
                   
                   <div className="mt-4">
-                    <div className="text-3xl font-bold text-gray-800">{plan.price}</div>
-                    <div className="text-sm text-gray-600">valor inicial</div>
-                    <div className="text-lg font-semibold text-blue-600 mt-2">{plan.monthly}</div>
+                    {plan.originalPrice && (
+                      <div className="text-sm text-gray-500 line-through">
+                        {plan.originalPrice}
+                      </div>
+                    )}
+                    <div className="text-3xl font-bold text-green-600">{plan.price}</div>
+
+                    {plan.discountPercent && (
+                      <div className="text-sm text-red-500 font-semibold">
+                        {plan.discountPercent} OFF
+                      </div>
+                    )}
+
+                    <div className="text-sm text-gray-600 mt-1">{plan.monthly}</div>
                     <div className="text-xs text-gray-500">mensalidade</div>
+
+                    {plan.promoNote && (
+                      <div className="mt-2 text-xs text-yellow-600 font-medium italic">
+                        {plan.promoNote}
+                      </div>
+                    )}
                   </div>
+
                 </CardHeader>
                 
                 <CardContent className="pt-0">
