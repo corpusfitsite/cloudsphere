@@ -101,31 +101,25 @@ const Index = () => {
     }
   ];
 
-  const projetos = [
-    {
-      nome: "Site da Academia CorpusFit",
-      plano: "Premium",
-      emoji: "",
-      descricao: "Site institucional com login de alunos, mapa interativo e agenda de treinos.",
-      imagem: "/public/projetos/corpusfit.png",
-      link: "https://corpusfit.site",
-    },
-    // {
-    //   nome: "Loja Roupas Urbanas",
-    //   plano: "Loja Digital PRO",
-    //   emoji: "🛍️",
-    //   descricao: "E-commerce completo com painel de estoque, pagamentos integrados e frete automático.",
-    //   imagem: "/projetos/urbanstore.png",
-    // },
-    {
-      nome: "Landing Page TH Eletrica",
-      plano: "Site Express",
-      emoji: "",
-      descricao: "Landing Page para divulgação de serviços de eletrica com formulario para contato",
-      imagem: "/public/projetos/theletrica.png",
-      link: "https://theos-electric-spark.onrender.com",
-    },
-  ];
+const projetos = [
+  {
+    nome: "Site da Academia CorpusFit",
+    plano: "Premium",
+    emoji: "",
+    descricao: "Site institucional com login de alunos, mapa interativo e agenda de treinos.",
+    imagem: "/projetos/corpusfit.png", 
+    link: "https://corpusfit.site",
+  },
+  {
+    nome: "Landing Page TH Eletrica",
+    plano: "Site Express",
+    emoji: "",
+    descricao: "Landing Page para divulgação de serviços de eletrica com formulario para contato",
+    imagem: "/projetos/theletrica.png", 
+    link: "https://theos-electric-spark.onrender.com",
+  },
+];
+
 
   const getIcon = (featureName: string) => {
     switch (featureName) {
@@ -352,4 +346,5 @@ const Index = () => {
     </div>
   );
 };
+
 export default Index;
