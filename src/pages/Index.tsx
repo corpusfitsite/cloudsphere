@@ -8,14 +8,14 @@ const Index = () => {
   const plans = [
     {
       name: "Site Express",
-      emoji: "🍟",
+      emoji: "",
       description: "Básico (3 pág.)",
-      price: "R$500",
+      price: "R$397",
       monthly: "Grátis",
       features: [
         { name: "Tipo de site", value: "Básico (3 pág.)", included: true },
         { name: "Velocidade de carregamento", value: "Lenta (free)", included: false },
-        { name: "Domínio Personalizado", value: "Não incluso", included: false },
+        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
         { name: "Manutenção Mensal", value: "Não inclusa", included: false },
         { name: "Futuras alterações", value: "Valor padrão", included: false },
         { name: "Chatbot AI Integrado", value: "Não", included: false },
@@ -25,16 +25,16 @@ const Index = () => {
       ]
     },
     {
-      name: "Essencial",
-      emoji: "🍔",
+      name: "Combo Essencial",
+      emoji: "",
       badge: "🔥",
       description: "Até 6 pág.",
-      price: "R$800",
+      price: "R$649",
       monthly: "R$149/mês",
       features: [
         { name: "Tipo de site", value: "Até 6 pág.", included: true },
         { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: "Incluso", included: true },
+        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
         { name: "Manutenção Mensal", value: "Inclusa", included: true },
         { name: "Futuras alterações", value: "Valor padrão", included: false },
         { name: "Chatbot AI Integrado", value: "Não", included: false },
@@ -44,16 +44,16 @@ const Index = () => {
       ]
     },
     {
-      name: "Premium",
-      emoji: "🍔🍟",
+      name: "Combo Premium",
+      emoji: "👑",
       badge: "⭐",
       description: "Até 10 pág.",
-      price: "R$950",
+      price: "R$797",
       monthly: "R$189/mês",
       features: [
         { name: "Tipo de site", value: "Até 10 pág.", included: true },
         { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: "Incluso", included: true },
+        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
         { name: "Manutenção Mensal", value: "Inclusa", included: true },
         { name: "Futuras alterações", value: "Camarada", included: true },
         { name: "Chatbot AI Integrado", value: "Não", included: false },
@@ -64,7 +64,7 @@ const Index = () => {
     },
     {
       name: "Max AI",
-      emoji: "🍔🍟🥤",
+      emoji: "",
       badge: "🤖",
       description: "Ilimitado",
       price: "R$1.200",
@@ -82,15 +82,15 @@ const Index = () => {
       ]
     },
     {
-      name: "Loja Digital PRO",
+      name: "Loja Virtual PRO",
       emoji: "🛍️",
       description: "Loja virtual completa",
-      price: "R$1.800",
-      monthly: "R$259/mês",
+      price: "R$1497",
+      monthly: "R$229/mês",
       features: [
         { name: "Tipo de site", value: "Loja virtual completa", included: true },
         { name: "Velocidade de carregamento", value: "Rápida", included: true },
-        { name: "Domínio Personalizado", value: "Incluso", included: true },
+        { name: "Domínio Personalizado", value: ".com.br grátis 1 ano", included: true },
         { name: "Manutenção Mensal", value: "Inclusa", included: true },
         { name: "Futuras alterações", value: "Camarada", included: true },
         { name: "Chatbot AI Integrado", value: "Opcional ($)", included: true },
@@ -99,6 +99,32 @@ const Index = () => {
         { name: "Painel de pedidos e estoque", value: "Incluso", included: true },
       ]
     }
+  ];
+
+  const projetos = [
+    {
+      nome: "Site da Academia CorpusFit",
+      plano: "Premium",
+      emoji: "",
+      descricao: "Site institucional com login de alunos, mapa interativo e agenda de treinos.",
+      imagem: "/public/projetos/corpusfit.png",
+      link: "https://corpusfit.site",
+    },
+    // {
+    //   nome: "Loja Roupas Urbanas",
+    //   plano: "Loja Digital PRO",
+    //   emoji: "🛍️",
+    //   descricao: "E-commerce completo com painel de estoque, pagamentos integrados e frete automático.",
+    //   imagem: "/projetos/urbanstore.png",
+    // },
+    {
+      nome: "Landing Page TH Eletrica",
+      plano: "Site Express",
+      emoji: "",
+      descricao: "Landing Page para divulgação de serviços de eletrica com formulario para contato",
+      imagem: "/public/projetos/theletrica.png",
+      link: "https://theos-electric-spark.onrender.com",
+    },
   ];
 
   const getIcon = (featureName: string) => {
@@ -127,9 +153,11 @@ const Index = () => {
               </div>
               <span className="text-xl font-bold text-gray-800">CloudSphere</span>
             </div>
-            <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-              Contato
-            </Button>
+           <a href="#formulario">
+              <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                Contato
+              </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -140,7 +168,7 @@ const Index = () => {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
             Criação de Sites
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-              CloudSphere
+             CloudSphere
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -233,6 +261,32 @@ const Index = () => {
         </div>
       </section>
 
+       {/* Projetos Recentes */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+            Projetos Realizados
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projetos.map((projeto, index) => (
+              <Card key={index} className="shadow-md hover:shadow-xl transition-all">
+                <a href={projeto.link} target="_blank" rel="noopener noreferrer">
+                  <img src={projeto.imagem} alt={projeto.nome} className="w-full h-48 object-cover rounded-t-md" />
+                </a>
+                <CardContent className="p-4">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg font-bold text-gray-800">{projeto.nome}</h3>
+                    <span className="text-xl">{projeto.emoji}</span>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-2">{projeto.descricao}</p>
+                  <Badge className="bg-blue-100 text-blue-600">Plano: {projeto.plano}</Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto text-center">
@@ -242,9 +296,39 @@ const Index = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Entre em contato conosco e vamos criar o site dos seus sonhos juntos.
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-            Falar com Especialista
-          </Button>
+          <a href="#formulario">
+            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
+              Falar com Especialista
+            </Button>
+          </a>
+        </div>
+      </section>
+
+      {/* Formulário de Contato */}
+      <section id="formulario" className="py-20 px-4 bg-white">
+        <div className="container max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Formulário de Contato</h2>
+          <form className="space-y-6">
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Nome</label>
+              <input type="text" className="w-full mt-1 p-3 border border-gray-300 rounded-lg" placeholder="Seu nome completo" required />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" className="w-full mt-1 p-3 border border-gray-300 rounded-lg" placeholder="seu@email.com" required />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">WhatsApp</label>
+              <input type="tel" className="w-full mt-1 p-3 border border-gray-300 rounded-lg" placeholder="(99) 99999-9999" required />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700">Mensagem</label>
+              <textarea className="w-full mt-1 p-3 border border-gray-300 rounded-lg" rows={4} placeholder="Conte como podemos te ajudar" required></textarea>
+            </div>
+            <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700">
+              Enviar Mensagem
+            </Button>
+          </form>
         </div>
       </section>
 
