@@ -3,14 +3,40 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, X, Globe, Zap, Settings, MessageCircle, ShoppingCart, CreditCard, BarChart3 } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const Index = () => {
+  const [status, setStatus] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("Enviando...");
+
+    emailjs.sendForm(
+      "service_ciiu0yl", 
+      "template_qe2cxe8",
+      e.target,
+      "lCPs6kyFbYvuP2izs" 
+    )
+    .then(() => {
+      setStatus("✅ Mensagem enviada com sucesso!");
+      e.target.reset();
+    })
+    .catch(() => {
+      setStatus("❌ Erro ao enviar. Tente novamente.");
+    });
+  };
+
   const plans = [
   {
     name: "Site Express",
     description: "Básico (3 pág.)",
-    price: "R$600",
+    originalPrice: "R$600",
+    price: "R$397",
+    discountPercent: "-33,8%",
     monthly: "Grátis",
+    promoNote: "💥 Promoção exclusiva por tempo limitado!",
     features: [
       { name: "Tipo de site", value: "Básico (3 pág.)", included: true },
       { name: "Velocidade de carregamento", value: "Lenta (free)", included: false },
@@ -31,7 +57,7 @@ const Index = () => {
     price: "R$649",
     discountPercent: "-18,9%",
     monthly: "R$149/mês",
-    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    promoNote: "🎉 📅 Promoção válida até 30 de junho de 2025 ou enquanto durarem os estoques.",
     features: [
       { name: "Tipo de site", value: "Até 6 pág.", included: true },
       { name: "Velocidade de carregamento", value: "Rápida", included: true },
@@ -52,7 +78,7 @@ const Index = () => {
     price: "R$797",
     discountPercent: "-16,1%",
     monthly: "R$189/mês",
-    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    promoNote: "🎉 📅 Promoção válida até 30 de junho de 2025 ou enquanto durarem os estoques.",
     features: [
       { name: "Tipo de site", value: "Até 10 pág.", included: true },
       { name: "Velocidade de carregamento", value: "Rápida", included: true },
@@ -74,7 +100,7 @@ const Index = () => {
     price: "R$997",
     discountPercent: "-16,9%",
     monthly: "R$229/mês",
-    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    promoNote: "🎉 📅 Promoção válida até 30 de junho de 2025 ou enquanto durarem os estoques.",
     features: [
       { name: "Tipo de site", value: "Ilimitado", included: true },
       { name: "Velocidade de carregamento", value: "Rápida", included: true },
@@ -95,7 +121,7 @@ const Index = () => {
     price: "R$1497",
     discountPercent: "-16,8%",
     monthly: "R$229/mês",
-    promoNote: "🎉 Válido apenas para os 10 primeiros clientes!",
+    promoNote: "🎉 📅 Promoção válida até 30 de junho de 2025 ou enquanto durarem os estoques.",
     features: [
       { name: "Tipo de site", value: "Loja virtual completa", included: true },
       { name: "Velocidade de carregamento", value: "Rápida", included: true },
@@ -126,7 +152,7 @@ const projetos = [
     emoji: "",
     descricao: "Landing Page para divulgação de serviços de eletrica com formulario para contato",
     imagem: "/projetos/theletrica.png", 
-    link: "https://theos-electric-spark.onrender.com",
+    link: "https://theos-electric-spark.vercel.app",
   },
 ];
 
@@ -330,29 +356,58 @@ const projetos = [
       <section id="formulario" className="py-20 px-4 bg-white">
         <div className="container max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Formulário de Contato</h2>
-          <form className="space-y-6">
+          <form onSubmit={sendEmail} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700">Nome</label>
-              <input type="text" className="w-full mt-1 p-3 border border-gray-300 rounded-lg" placeholder="Seu nome completo" required />
+              <input
+                type="text"
+                name="nome"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg"
+                placeholder="Seu nome completo"
+                required
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" className="w-full mt-1 p-3 border border-gray-300 rounded-lg" placeholder="seu@email.com" required />
+              <input
+                type="email"
+                name="email"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg"
+                placeholder="seu@email.com"
+                required
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">WhatsApp</label>
-              <input type="tel" className="w-full mt-1 p-3 border border-gray-300 rounded-lg" placeholder="(99) 99999-9999" required />
+              <input
+                type="tel"
+                name="telefone"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg"
+                placeholder="(99) 99999-9999"
+                required
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">Mensagem</label>
-              <textarea className="w-full mt-1 p-3 border border-gray-300 rounded-lg" rows={4} placeholder="Conte como podemos te ajudar" required></textarea>
+              <textarea
+                name="mensagem"
+                className="w-full mt-1 p-3 border border-gray-300 rounded-lg"
+                rows={4}
+                placeholder="Conte como podemos te ajudar"
+                required
+              ></textarea>
             </div>
-            <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700">
+            <Button
+              type="submit"
+              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700"
+            >
               Enviar Mensagem
             </Button>
+            <p className="text-sm text-center mt-2 text-gray-600">{status}</p>
           </form>
         </div>
       </section>
+
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 px-4">
