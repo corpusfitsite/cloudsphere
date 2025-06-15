@@ -944,10 +944,10 @@ const projetos = [
             <span className="text-xl font-bold">CloudSphere</span>
           </div>
           <p className="text-gray-400 mb-4">
-            Criando experiências digitais incríveis desde 2024
+            Criando experiências digitais incríveis desde 2022
           </p>
           <div className="text-sm text-gray-500">
-            © 2024 CloudSphere. Todos os direitos reservados.
+            © 2022 CloudSphere. Todos os direitos reservados.
           </div>
         </div>
       </footer>
