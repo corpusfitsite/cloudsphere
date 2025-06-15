@@ -434,7 +434,7 @@ const projetos = [
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="font-bold">CS</span>
+                      <span className="font-bold">JS</span>
                     </div>
                     <div>
                       <h4 className="font-semibold">Joao Sarruf</h4>
@@ -444,7 +444,7 @@ const projetos = [
                   
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="font-bold">MO</span>
+                      <span className="font-bold">PC</span>
                     </div>
                     <div>
                       <h4 className="font-semibold">Paulo Cordeiro</h4>
@@ -454,7 +454,7 @@ const projetos = [
                   
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                      <span className="font-bold">RS</span>
+                      <span className="font-bold">TA</span>
                     </div>
                     <div>
                       <h4 className="font-semibold">Theobaldo Alves</h4>
