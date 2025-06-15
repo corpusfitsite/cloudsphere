@@ -437,8 +437,8 @@ const projetos = [
                       <span className="font-bold">CS</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Carlos Silva</h4>
-                      <p className="text-sm opacity-90">CEO & Desenvolvedor Full-Stack</p>
+                      <h4 className="font-semibold">Joao Sarruf</h4>
+                      <p className="text-sm opacity-90">Desenvolvedor Full-Stack</p>
                     </div>
                   </div>
                   
@@ -447,7 +447,7 @@ const projetos = [
                       <span className="font-bold">MO</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Marina Oliveira</h4>
+                      <h4 className="font-semibold">Paulo Cordeiro</h4>
                       <p className="text-sm opacity-90">UX/UI Designer</p>
                     </div>
                   </div>
@@ -457,7 +457,7 @@ const projetos = [
                       <span className="font-bold">RS</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Rafael Santos</h4>
+                      <h4 className="font-semibold">Theobaldo Alves</h4>
                       <p className="text-sm opacity-90">Especialista em SEO</p>
                     </div>
                   </div>
